@@ -1,0 +1,76 @@
+@keyframes prueba {
+    from {        
+        top: 0px;
+    }
+    to {       
+        bottom: 400px;
+    }
+  }
+
+.div_animado
+{
+    animation-name: prueba;
+    animation-duration: 8s;
+    position: relative;
+    animation-iteration-count: infinite;    
+    width: 100px;
+    height: 100px;
+    animation: play 2s steps(4) infinite;
+}
+
+
+ion-img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.monster {
+    width: 192px;
+    height: 366px;
+    margin: 2% auto;
+    background: url('src/assets/spritesheet.png') left center;
+    animation: play 1s steps(10) infinite;
+  }
+  
+  @keyframes play {
+      100% { background-position: -1900px; }
+  }
+
+  @keyframes shine {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .shine {
+    animation-name: shine;
+    animation-duration: 2s;
+  }
+
+
+ion-content{
+  --background: url('src/assets/PlanetX.png') no-repeat center center / cover; 
+}
+  
+

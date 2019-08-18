@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="first"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Info</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-card class="sett">
+      <ion-card-header>
+        <ion-card-subtitle>Acerda de</ion-card-subtitle>
+        <ion-card-title>Mercury Mission</ion-card-title>
+        <ion-card-content>Version 1.0</ion-card-content>
+      </ion-card-header>
+      <ion-list>
+          <ion-item>
+        <ion-button (click)="presentAlert()" fill="clear" class="cred">Privacy Policy</ion-button>
+        <ion-button (click)="presentAlert()" fill="clear" class="cred">Service Policy</ion-button>  
+        </ion-item>
+        </ion-list>
+      
+      <ion-card-content>
+          <small>©2019 Mercury Mission by Bonilla. All rights reserved</small>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

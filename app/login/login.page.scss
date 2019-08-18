@@ -1,0 +1,15 @@
+.center{
+    text-align: center;
+}
+
+.margin{
+    margin: 100px;
+}
+
+ion-card{
+    display: table-cell;
+    flex-direction: column;
+    width: 70% !important;
+    margin: 0 !important;
+  }
+

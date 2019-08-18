@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="center">Iniciar Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="medium">
+    <ion-grid style="height: 100%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+    <ion-card padding class="center" color="light">
+      <form [formGroup]="frmLogin">
+        <br>
+        <ion-item>
+        <ion-icon name="contact" padding></ion-icon>
+        <ion-input type="text" placeholder="Usuario" formControlName="usuario"></ion-input>
+      </ion-item>
+        <br>
+        <ion-label color="danger" *ngIf="frmLogin.controls.usuario.invalid && frmLogin.controls.usuario.dirty">Ingresa tu Usuario Por favor</ion-label>
+        <ion-item>
+        <ion-icon name="unlock" padding></ion-icon>
+        <ion-input type="password" placeholder="Contraseña" formControlName="contrasena"></ion-input>
+      </ion-item>
+        <br>
+        <ion-label color="danger" *ngIf="frmLogin.controls.contrasena.invalid && frmLogin.controls.contrasena.dirty">Ingresa tu Contraseña Por favor</ion-label>
+        <br>
+        <ion-button (click)="Iniciar()">Iniciar Sesion</ion-button>
+        <br>
+        <ion-button (click)="registrarse()" fill="outline">Registrarse</ion-button> 
+    </form>
+    <ion-item color="light"></ion-item>
+        <br>
+        <ion-label class="center">¿No eres administrador?</ion-label> 
+        <br><br>
+        <ion-button class="center" (click)="verProg()">Visitante</ion-button>
+    </ion-card>
+    </ion-row>
+    </ion-grid>
+</ion-content>
+

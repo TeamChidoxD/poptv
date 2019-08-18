@@ -1,0 +1,28 @@
+<ion-content padding>
+  <ion-img src=..\..\assets\icon\icon.png class="myphoto" ></ion-img>
+
+  <div class="centerText">
+   <ion-img src=..\..\assets\logo2.png class="myphoto"></ion-img>
+   <br>
+   <ion-button (click)="second()" fill="outline">Play</ion-button> 
+ </div>
+</ion-content>
+ <ion-footer>
+   <ion-row class="center">
+     <ion-col>
+     <ion-tab-button tab="info" (click)="info()">
+         <ion-icon color="primary" name="information-circle"></ion-icon>
+     </ion-tab-button>
+     </ion-col>
+     <ion-col>
+     <ion-tab-button tab="share" (click)="presentActionSheet()">
+       <ion-icon color="primary" name="share" ></ion-icon>
+     </ion-tab-button>
+  </ion-col>
+  <ion-col>
+     <ion-tab-button tab="settings" (click)="settings()">
+       <ion-icon color="primary" name="settings"></ion-icon>
+     </ion-tab-button>
+   </ion-col>
+   </ion-row>
+</ion-footer>

@@ -1,0 +1,10 @@
+.center{
+    text-align: center;
+}
+
+ion-card{
+    display: table-cell;
+    flex-direction: column;
+    width: 70% !important;
+    margin: 0 !important;
+}

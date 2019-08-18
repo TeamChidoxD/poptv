@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="login"></ion-back-button>
+      </ion-buttons>
+    <ion-title class="center">Ver programas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" >
+    <ion-grid style="height: 100%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+        <ion-item *ngFor = "let programa of arrPrograma" color="medium">
+          <ion-card class="center" color="light">
+          <p>Título: </p>{{programa.titulo}} <br>
+          <p>Categoría: </p>{{programa.categoria}} <br>
+          <p>Temporadas: </p>{{programa.temporadas}} <br>
+          <p>Descripción: </p>{{programa.descripcion}} <br>
+          <ion-button (click)="hide()">Comentar</ion-button>
+          </ion-card><br><br>
+        </ion-item>
+        </ion-row>
+        </ion-grid>
+        <ion-button (click)="graph()">Ver graficas</ion-button>
+</ion-content>
+<div *ngIf = "hideMe" color="medium">
+          <ion-card color="light">
+          <form [formGroup]= "formVisit">
+              <ion-item>
+                  <ion-label position="floating">ID del programa</ion-label>
+                  <ion-input formControlName="id_prog"></ion-input>
+                </ion-item>
+          <ion-item>
+          <ion-label position="floating">Nombre de usuario</ion-label>
+          <ion-input formControlName="nickname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input formControlName="correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Edad</ion-label>
+          <ion-select formControlName="edad" placeholder="Selecciona rango de edad">
+            <ion-select-option>10-15</ion-select-option>
+            <ion-select-option>15-30</ion-select-option>
+            <ion-select-option>30-45</ion-select-option>
+            <ion-select-option>45+</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Ubicación</ion-label>
+          <ion-select formControlName="ubicacion" placeholder="Seleccionar una">
+            <ion-select-option>Argentina</ion-select-option>
+            <ion-select-option>Canada</ion-select-option>
+            <ion-select-option>China</ion-select-option>
+            <ion-select-option>Colombia</ion-select-option>
+            <ion-select-option>Francia</ion-select-option>
+            <ion-select-option>Italia</ion-select-option>
+            <ion-select-option>México</ion-select-option>
+            <ion-select-option>Perú</ion-select-option>
+            <ion-select-option>Uruguay</ion-select-option>
+            <ion-select-option>Venezuela</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Genero</ion-label>
+          <ion-select formControlName="genero" placeholder="Seleccionar una">
+            <ion-select-option>Masculino</ion-select-option>
+            <ion-select-option>Femenino</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <!--<ion-item>
+          <ion-label position="floating">Reacción</ion-label>
+          <ion-input formControlName="reaccion"></ion-input>
+        </ion-item>-->
+        <ion-item>
+          <ion-label position="floating">Comentario</ion-label>
+          <ion-input formControlName="comentario"></ion-input>
+        </ion-item>
+        </form>
+        <br>
+        <ion-button class="center" (click)="Registrarse()">Hecho</ion-button>
+        </ion-card>
+      </div>
+  

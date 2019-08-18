@@ -1,0 +1,17 @@
+<ion-content padding>  
+  <ion-item *ngFor = "let clientes of ArrClientes">
+    <div id="snackbar">
+      {{clientes.nombre}}<br>
+    </div>
+  </ion-item>
+
+  <ion-button (click)="Cargar()">Cargar</ion-button>
+  <ion-label>
+    {{mensaje_error}}
+  </ion-label>
+
+  <button (click)="myFunction()">Show Snackbar</button>
+</ion-content>
+
+
+

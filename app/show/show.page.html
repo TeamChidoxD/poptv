@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="login"></ion-back-button>
+      </ion-buttons>
+    <ion-title class="center">Agregar Programa de TV</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="medium">
+    <ion-grid style="height: 100%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+  <ion-card class="center" color="light">
+  <form [formGroup]= "formProg">
+  <ion-item>
+  <ion-label position="floating">Título</ion-label>
+  <ion-input formControlName="titulo"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating" placeholder="Seleccionar una">Categoría</ion-label>
+  <ion-select formControlName="categoria" placeholder="Seleccionar una">
+    <ion-select-option>Acción</ion-select-option>
+    <ion-select-option>Animada</ion-select-option>
+    <ion-select-option>Ciencia ficción</ion-select-option>
+    <ion-select-option>Comedia</ion-select-option>
+    <ion-select-option>Drama</ion-select-option>
+    <ion-select-option>Suspenso</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label position="floating" placeholder="AAAA/MM/DD">Fecha de emisión</ion-label>
+  <ion-input formControlName="fecha_emision"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Temporadas</ion-label>
+  <ion-input formControlName="temporadas"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Elenco</ion-label>
+  <ion-input formControlName="elenco"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Descripción</ion-label>
+  <ion-input formControlName="descripcion"></ion-input>
+</ion-item>
+</form>
+<br>
+<ion-button (click)="Register()">Registrar</ion-button>
+</ion-card>
+</ion-row>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,22 @@
+//Color de fondo
+ion-content{
+    --background: linear-gradient(197deg, rgb(177, 177, 177) 0%, rgb(225, 225, 226) 33.33%, rgb(255, 255, 255,1) 100%) !important;
+    
+    //--background: linear-gradient(197deg, rgb(125, 22, 163,1) 0%, rgb(93, 113, 184,1) 33.33%, rgb(85, 248, 253,1) 100%) !important;
+}
+
+
+//Cambio de tamaño de una etiqueta img
+.myphoto {
+    height: auto !important;
+    width: 200px !important;
+    margin:auto;
+}
+
+.ios {
+    --ion-font-family: 'San Francisco'; /* It's also good to add a fallback font here */
+  }
+
+.centerText{
+    text-align:center;
+  }  
